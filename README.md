@@ -1,8 +1,8 @@
 # brake
-bldc drive of 12kN brake
-main.c:
-control.c: control program for this application
-variousfcs.c: auxiliary functions. buttonfilt() button or switch filter, pwmvolt() set pwm motor output, Filt() adc filter, inmbmem() input values into modbus memory
-ecmotor.c: motor commutation according to Hall sensors
-modbus.c: some modbus protocol functions 
-sericom.c : uart for modbus
+BLDC motor drive of 12kN brake.
+Main.c: Reset and main cycle.
+Control.c: Control program for this application.
+Variousfcs.c: Auxiliary functions. buttonfilt() button or switch filter, pwmvolt() set pwm motor output, Filt() adc filter, inmbmem() input values into modbus memory.
+Ecmotor.c: Motor commutation according to Hall sensors.
+Modbus.c: Some basic modbus protocol functions. 
+Sericom.c : Uart for modbus.
