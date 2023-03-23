@@ -3,6 +3,54 @@
 controlbits controls;
 uint8_t swec;
 bint swfil;
+bool RES;
+
+uint16_t INP[PARMBMEMS];
+
+
+bool writeflashDW(uint32_t flash_addr,uint16_t Data0, uint16_t Data1)
+{
+               FLASH_Unlock(FLASH_UNLOCK_KEY);
+    
+    // ------------------------------------------
+    // Fill a page of memory with data.  
+    // ------------------------------------------
+    
+    // Erase the page of flash at this address
+            RES = FLASH_ErasePage(flash_addr);
+   
+    // Program flash with a data pattern.  For the data pattern we will use the index 
+    // into the flash as the data.
+  
+    RES &=  FLASH_WriteDoubleWord16(flash_addr,Data0,Data1);
+
+    // Clear Key for NVM Commands so accidental call to flash routines will not corrupt flash
+    FLASH_Lock();
+    return RES;
+}
+
+
+bool writeflash(uint32_t flash_addr,uint16_t *ptdata)
+{
+               FLASH_Unlock(FLASH_UNLOCK_KEY);
+    
+    // ------------------------------------------
+    // Fill a page of memory with data.  
+    // ------------------------------------------
+    
+    // Erase the page of flash at this address
+            RES = FLASH_ErasePage(flash_addr);
+   
+    // Program flash with a data pattern.  For the data pattern we will use the index 
+    // into the flash as the data.
+  
+            RES &= FLASH_WriteRow16(flash_addr, ptdata);
+
+    // Clear Key for NVM Commands so accidental call to flash routines will not corrupt flash
+    FLASH_Lock();
+    return RES;
+}
+
 
 inline void inivarifcs(void) //init switch or button 
 {
@@ -15,7 +63,7 @@ inline void inivarifcs(void) //init switch or button
 //then it gradually shifts the filter register 8 times, i.e. a total of 64ms
 inline void buttonfilt(void)
 {
-    swec ++;
+   swec ++;
    swec &= 0x07;
    switch(swec)
    {
@@ -43,21 +91,6 @@ inline void buttonfilt(void)
    }
 }
 
-//set ratio of pwm output; max. ratio is 1000 of 1024  
- void pwmvolt(int permilleratio)
-{
-     uint32_t lotr;
-     if(permilleratio < 0)
-     {
-      permilleratio = -permilleratio;
-      ec.Required_Direction= CCW;
-     }
-     else
-      ec.Required_Direction= CW;
-     if(permilleratio > 1000)permilleratio = 1000;
-     lotr= ((uint32_t)(permilleratio + 0x400)) * PTPER;//t
-     MDC= lotr >> 11; 
-}
 
 void Filt(adcfilter *pADCfilter)//adc  filter
 {
@@ -76,10 +109,6 @@ void Filt(adcfilter *pADCfilter)//adc  filter
   }
 }
 
-#define MEMPAUSE 50
-#define PARMBMEMS 6
-#define MAXMBWORDS 128
-//#define MAXPARSETS (MAXMBWORD/PARMBMEMS)
 uint16_t mem,timem;
 
 //write input values into modbus memory 
@@ -100,7 +129,7 @@ inline void inmbmem(void)
      {
         if(mem < MAXMBWORDS)
         {
-                    INPREGS[mem].W = INPREGS[m].W;
+                    INPREGS[mem].W = INP[m];
                     mem++;
         } 
         else

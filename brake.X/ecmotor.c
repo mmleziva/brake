@@ -254,3 +254,19 @@ void __attribute__ ((weak)) IC3_CallBack(void)
 
         
 }
+
+//set ratio of pwm output; max. ratio is 1000 of 1024  
+void pwmvolt(int permilleratio)
+{
+     uint32_t lotr;
+     if(permilleratio < 0)
+     {
+      permilleratio = -permilleratio;
+      ec.Required_Direction= CCW;
+     }
+     else
+      ec.Required_Direction= CW;
+     if(permilleratio > 1000)permilleratio = 1000;
+     lotr= ((uint32_t)(permilleratio + 0x400)) * PTPER;//t
+     MDC= lotr >> 11; 
+}

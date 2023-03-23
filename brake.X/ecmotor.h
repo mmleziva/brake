@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <libq.h>
 
-#define INV
+#define INV  //if Hall sensors have inverse logic
 
  #define CCW    	1		// Counter Clock Wise direction
  #define CW      0		// Clock Wise direction
@@ -79,5 +79,6 @@ void  IC1_CallBack(void);
 void  IC2_CallBack(void);
 void  IC3_CallBack(void);
 void  ForceCommutation(void);
+void pwmvolt(int permilleratio);
 #endif	/* ECMOTOR */
 

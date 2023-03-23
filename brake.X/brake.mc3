@@ -6750,19 +6750,19 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM" name="SyncOutClock"/>
-         <value>182407500000</value>
+         <value>729630000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM" name="dutyCyclePercentage1"/>
-         <value>68.27 %</value>
+         <value>34.13 %</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM" name="dutyCyclePercentage2"/>
-         <value>68.27 %</value>
+         <value>34.13 %</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM" name="dutyCyclePercentage3"/>
-         <value>68.27 %</value>
+         <value>34.13 %</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PWM" name="periodInSecond1"/>
@@ -9598,11 +9598,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PTCON2"/>
-         <value>1</value>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PTPER"/>
-         <value>3000</value>
+         <value>6000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PWMCAP1"/>
@@ -9634,7 +9634,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="SEVTCMP"/>
-         <value>384</value>
+         <value>768</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="TRGCON1"/>
@@ -10210,11 +10210,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PTCON2" settingAlias="PCLKDIV"/>
-         <value>2</value>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PTPER" settingAlias="PTPER"/>
-         <value>3000</value>
+         <value>6000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PWM1I" settingAlias="context"/>
@@ -10438,7 +10438,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="SEVTCMP" settingAlias="SEVTCMP"/>
-         <value>384</value>
+         <value>768</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="TRGCON1" settingAlias="TRGDIV"/>
@@ -14827,12 +14827,12 @@
          <hash>45e352a967494a1272f53cd63265368c4e7865461c471c9f40ff0542ef0a3b50</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\ic4.h</file>
-         <hash>946c3fa46e7c3c325f3c41054faac910b889fb0418b38f9afc14b83e1c950909</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\cvr1.h</file>
          <hash>aae684aba19e9826b56e905718f2c724f08e4356c1b371726099150dca4fc73c</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\ic4.h</file>
+         <hash>946c3fa46e7c3c325f3c41054faac910b889fb0418b38f9afc14b83e1c950909</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\ic2.h</file>
@@ -14844,7 +14844,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>917b0505342d0c81ab12bcd66dfe1ed580893137503e38f52444ffd768aa654b</hash>
+         <hash>4840871e0f9366eb729e6c991e94ab987bf1523297a04ac19f04b643e18d5977</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\ic4.c</file>
@@ -14867,16 +14867,16 @@
          <hash>ceeae3e9ff2d1a01ff6d07e005eb2094f53466ab3e5c1fd881a08b4c67fe3557</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>9ade21512633f5b18e4624336f4108e8a9ccb1c5d809a1073c00d91f400900bc</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\pwm_module_features.h</file>
          <hash>752b8a0654ec803d70c399a2af2b1abb79d47de2bc87b9724d33e237ddf0d7eb</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\dma.c</file>
          <hash>ce1e0aa0cf8ec9e8e0670955196647e42bc6098ac89abf800af05a283fb180c2</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>9ade21512633f5b18e4624336f4108e8a9ccb1c5d809a1073c00d91f400900bc</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\opamp5.c</file>
@@ -14896,7 +14896,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>cf1190f5c1e0be2f24453061eaa493dabff8a49dee9f23a87023d79705e4b942</hash>
+         <hash>c9822d268f2d214574b16fe09319bc9a594a938970a401f38dfcb742e685f832</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -14915,16 +14915,16 @@
          <hash>3cbebff3b70fec29534987f546e78853cd5b479da6be7e5b02405f89e8250072</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pwm.c</file>
-         <hash>7cd5504530b2413abd267425ee3e6223f20db445d5bb8d5cab107d5354c172d5</hash>
+         <file>mcc_generated_files\ic3.c</file>
+         <hash>72193c2abc64bd5306e8fb3d52999a59406e2277cdbd0f7867c99d0a373beeed</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>93a86bd86ab1c468b0490c4a667bd27c4f7e3bbf515cab38bb549eccb3d745e3</hash>
+         <hash>87396c9e12c9912b9c1d805a2514167494454466c8d410ea5d0b78c141dccdcb</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\ic3.c</file>
-         <hash>72193c2abc64bd5306e8fb3d52999a59406e2277cdbd0f7867c99d0a373beeed</hash>
+         <file>mcc_generated_files\pwm.c</file>
+         <hash>97f523d13380294092b2168dee1739567d4debe01f86b7cf0ab414a396b46e6a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\tmr4.h</file>
@@ -14939,12 +14939,12 @@
          <hash>2cf8028ce9272ae8c929e9bff9f68a10581f39da96f6fa3325ecbeb08f588175</hash>
       </entry>
       <entry>
-         <file>main.c</file>
-         <hash>b75daa4d0e7fef828289cd47d36217ea4d25836fb6ce99b5079a8638bb208344</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\adc1.c</file>
          <hash>0c3d4d22c33a011c427cc79d656197d2724e4d9cf0a438e841db3b9f41815a76</hash>
+      </entry>
+      <entry>
+         <file>main.c</file>
+         <hash>b75daa4d0e7fef828289cd47d36217ea4d25836fb6ce99b5079a8638bb208344</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\tmr2.h</file>
@@ -14963,6 +14963,10 @@
          <hash>b10b98f90c0973d7d99f3021a17dcadb578051e449367cddd1cb708cf678224f</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\ic1.h</file>
+         <hash>a4c94d98f80c885a45fe4e6b29ab53af1d0c60b0be829a1946bb93ab9426250e</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\pwm.h</file>
          <hash>7c0c8d6c87d9564c398ff3f1f6e40e8e001c94a1bb64d9208d77fe648ad58def</hash>
       </entry>
@@ -14971,16 +14975,12 @@
          <hash>de83364c88067f9acccb8e69418f7009019e7e13034e4c59454b6cad3be3ebd6</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\ic1.h</file>
-         <hash>a4c94d98f80c885a45fe4e6b29ab53af1d0c60b0be829a1946bb93ab9426250e</hash>
+         <file>mcc_generated_files\traps.c</file>
+         <hash>79def6fc2897d61e7f709d7ddf04688c1bfacd4313b67e87dd1eb852a0b0b67c</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\cmp1.h</file>
          <hash>a53405c4ef5db6935ae0bba4a5d91c0c9b676c0fdb2c5bccc7a35b8317ca269b</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\traps.c</file>
-         <hash>79def6fc2897d61e7f709d7ddf04688c1bfacd4313b67e87dd1eb852a0b0b67c</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\cvr2.c</file>
@@ -14992,7 +14992,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\adc1.h</file>
-         <hash>20fae7b1da39ad2f6f085242c79aef2ef8c646aa17a0e3b9e7194b650f04ff81</hash>
+         <hash>026be4a25017b9eeb1a777269bbda8bc2a25bcbc2dd7e92a5d0e6d09cabde810</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\cmp1.c</file>

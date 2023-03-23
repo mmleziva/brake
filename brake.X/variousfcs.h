@@ -13,6 +13,11 @@
 #include "modbus.h"
 #define SW _RA2
 #define SWEN  _TRISA2       //set output/input 
+#define MEMPAUSE 50
+#define PARMBMEMS 6
+#define MAXMBWORDS 128
+//#define MAXPARSETS (MAXMBWORD/PARMBMEMS)
+
 typedef struct 
 {
     bool BEGIN;
@@ -30,8 +35,10 @@ typedef struct
     }controlbits;
 void inmbmem(void);    
 void inivarifcs(void);    
-void buttonfilt(void);    
-void pwmvolt(int permilleratio);
+void buttonfilt(void);  
+extern uint16_t INP[PARMBMEMS];
+bool writeflash(uint32_t flash_addr,uint16_t *data);
+bool writeflashDW(uint32_t flash_addr,uint16_t Data0, uint16_t Data1);
 void Filt(adcfilter *pADCfilter);//adc  filter
 extern controlbits controls;
 
